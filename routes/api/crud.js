@@ -26,6 +26,25 @@ router.post("/load", async (req, res) => {
 router.post(
   "/add",
   check("studentId", "studentId is required").notEmpty(),
+  check("nationality", "nationality is required").notEmpty(),
+  check("gender", "gender is required").notEmpty(),
+  check("placeofBirth", "placeofBirth is required").notEmpty(),
+  check("stageId", "stageId is required").notEmpty(),
+  check("gradeId", "gradeId is required").notEmpty(),
+  check("topic", "topic is required").notEmpty(),
+  check("semester", "semester is required").notEmpty(),
+  check("relation", "relation is required").notEmpty(),
+  check("raisedHands", "raisedHands is required").notEmpty(),
+  check("visitedResource", "visitedResource is required").notEmpty(),
+  check("announcementViews", "announcementViews is required").notEmpty(),
+  check("discussion", "discussion is required").notEmpty(),
+  check("parentAnsweringSurvey", "parentAnsweringSurvey is required").notEmpty(),
+  check("parentschoolSatisfaction", "parentschoolSatisfaction is required").notEmpty(),
+  check("studentAbsenceDays", "studentAbsenceDays is required").notEmpty(),
+  check("studentMarks", "studentMarks is required").notEmpty(),
+  check("classId", "classId is required").notEmpty(),
+  check("sectionId", "sectionId is required").notEmpty(),
+  
   async (req, res) => {
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
