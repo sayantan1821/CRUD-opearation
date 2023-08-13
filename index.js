@@ -13,6 +13,7 @@ app.use("/api", crud);
 app.use("/", (req, res) => {
   res.send("API is running");
 });
+const PORT = process.env.PORT || 1821;
 app.listen(process.env.PORT, () => {
-  console.log("Server listening on port " + process.env.PORT);
+  console.log("Server listening on port " + PORT);
 });
